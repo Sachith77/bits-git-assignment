@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment Submission - Git Workflow & Test Case Design</title>
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 12mm 14mm 12mm 14mm;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #1f2937;
+            background-color: #ffffff;
+            line-height: 1.4;
+            font-size: 8.5pt;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Student Submission Header */
+        .submission-header {
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 8px;
+            margin-bottom: 10px;
+        }
+
+        .submission-header h1 {
+            font-size: 15pt;
+            color: #1e3a8a;
+            margin: 0 0 3px 0;
+            font-weight: 700;
+        }
+
+        .submission-header .sub-title {
+            font-size: 10pt;
+            color: #4b5563;
+            margin: 0 0 8px 0;
+        }
+
+        .student-info-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8.5pt;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+        }
+
+        .student-info-table td {
+            padding: 5px 10px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .student-info-table td strong {
+            color: #1e3a8a;
+        }
+
+        /* Section Titles */
+        .question-header {
+            background-color: #1e40af;
+            color: #ffffff;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 11pt;
+            font-weight: 700;
+            margin: 10px 0 8px 0;
+        }
+
+        .step-heading {
+            font-size: 9.5pt;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin: 8px 0 4px 0;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 2px;
+        }
+
+        p {
+            margin: 0 0 5px 0;
+        }
+
+        ul, ol {
+            margin: 0 0 6px 0;
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 2px;
+        }
+
+        /* Code and Terminal Blocks */
+        code {
+            font-family: 'Consolas', monospace;
+            background-color: #f1f5f9;
+            color: #0f172a;
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-size: 8pt;
+            border: 1px solid #e2e8f0;
+        }
+
+        pre {
+            font-family: 'Consolas', monospace;
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 7.5pt;
+            line-height: 1.35;
+            margin: 4px 0 6px 0;
+            border: 1px solid #334155;
+        }
+
+        /* GitHub Box */
+        .github-box {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 3.5px solid #16a34a;
+            padding: 7px 12px;
+            border-radius: 4px;
+            margin: 6px 0 8px 0;
+        }
+
+        .github-box a {
+            color: #15803d;
+            font-weight: 700;
+            font-size: 9.5pt;
+            text-decoration: underline;
+        }
+
+        /* Tables */
+        table.data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 7.8pt;
+            margin: 6px 0 8px 0;
+        }
+
+        table.data-table th {
+            background-color: #1e3a8a;
+            color: #ffffff;
+            font-weight: 600;
+            text-align: left;
+            padding: 5px 7px;
+            border: 1px solid #1e3a8a;
+        }
+
+        table.data-table td {
+            padding: 4px 6px;
+            border: 1px solid #cbd5e1;
+            vertical-align: top;
+            line-height: 1.3;
+        }
+
+        table.data-table tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
+        .note-box {
+            background-color: #eff6ff;
+            border-left: 3px solid #3b82f6;
+            padding: 5px 8px;
+            font-size: 8pt;
+            margin: 5px 0 6px 0;
+            color: #1e40af;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== PAGE 1 ==================== -->
+    <div class="submission-header">
+        <h1>Lab Assignment Submission</h1>
+        <div class="sub-title">Version Control with Git &amp; GitHub &bull; Software Test Case Design</div>
+        <table class="student-info-table">
+            <tr>
+                <td><strong>Student Name:</strong> Sachith</td>
+                <td><strong>Course:</strong> Software Engineering Lab</td>
+            </tr>
+            <tr>
+                <td><strong>GitHub Account:</strong> <a href="https://github.com/Sachith77" target="_blank">@Sachith77</a></td>
+                <td><strong>Submission Date:</strong> November 2026</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="question-header">Question 1: Git &amp; GitHub Workflow</div>
+
+    <div class="github-box">
+        <strong>Public GitHub Repository Link:</strong><br>
+        <a href="https://github.com/Sachith77/bits-git-assignment" target="_blank">https://github.com/Sachith77/bits-git-assignment</a><br>
+        <span style="font-size: 7.5pt; color: #4b5563;">Public repository containing the complete commit history, branch structure, .gitignore configuration, and git_commands.txt.</span>
+    </div>
+
+    <div class="step-heading">Step 1: Local Repository Setup</div>
+    <p>I set up the project locally on my machine without creating a repository on GitHub first, as required:</p>
+    <ul>
+        <li>Created project folder: <code>d:\BITS\git-workflow-assignment</code></li>
+        <li>Created required HTML files: <code>index.html</code> (homepage) and <code>about.html</code> (about page).</li>
+        <li>Initialized the local Git repository with default branch named <code>main</code>.</li>
+    </ul>
+
+    <pre># Commands executed in PowerShell:
+New-Item -ItemType Directory -Path "d:\BITS\git-workflow-assignment"
+cd "d:\BITS\git-workflow-assignment"
+git init -b main
+# Output: Initialized empty Git repository in D:/BITS/git-workflow-assignment/.git/</pre>
+
+    <div class="step-heading">Step 2: Git Workflow Execution (Branching and Merging)</div>
+    <p>I executed the following version control steps in sequence:</p>
+    <ol>
+        <li><strong>Initial Commit:</strong> Staged <code>index.html</code> and <code>about.html</code> and committed the initial state (Commit: <code>0642323</code>).</li>
+        <li><strong>Second Commit on main:</strong> Modified <code>index.html</code> (added Key Topics section) and committed (Commit: <code>97d80cd</code>).</li>
+        <li><strong>Branch Creation &amp; Switch:</strong> Created branch <code>feature</code> and switched to it using <code>git switch feature</code>.</li>
+        <li><strong>Commit on feature:</strong> Updated <code>about.html</code> on branch <code>feature</code> to add branching details and committed (Commit: <code>23ccf53</code>).</li>
+        <li><strong>Merge into main:</strong> Switched back to <code>main</code> and merged <code>feature</code> using <code>git merge --no-ff feature</code> so the branch activity and merge commit remain explicitly recorded in the history (Commit: <code>f348d2a</code>).</li>
+    </ol>
+
+    <pre># Summary of Step 2 Commands:
+git add .
+git commit -m "Initial commit: Add index.html and about.html"
+# [main (root-commit) 0642323] Initial commit: Add index.html and about.html
+
+git add index.html
+git commit -m "Update index.html: Add key topics covered section"
+# [main 97d80cd] Update index.html: Add key topics covered section
+
+git branch feature
+git switch feature
+git add about.html
+git commit -m "Enhance about.html: Add branching strategy details on feature branch"
+# [feature 23ccf53] Enhance about.html: Add branching strategy details on feature branch
+
+git switch main
+git merge --no-ff feature -m "Merge branch 'feature' into main"
+# Merge made by the 'ort' strategy. [Commit: f348d2a]</pre>
+
+    <p><strong>Commit History Graph showing branch activity and merge commit:</strong></p>
+    <pre>git log --graph --oneline --all
+*   f348d2a (HEAD -> main) Merge branch 'feature' into main
+|\  
+| * 23ccf53 (feature) Enhance about.html: Add branching strategy details on feature branch
+|/  
+* 97d80cd Update index.html: Add key topics covered section
+* 0642323 Initial commit: Add index.html and about.html</pre>
+
+    <!-- ==================== PAGE 2 ==================== -->
+    <div class="page-break"></div>
+
+    <div class="step-heading">Step 3: .gitignore Implementation</div>
+    <p>I created a <code>.gitignore</code> file to exclude log files and temporary folders from version control:</p>
+    <pre># .gitignore file contents:
+*.log
+temp/</pre>
+    <p>To verify the ignore rules, I created dummy test files <code>debug.log</code> and <code>temp/cache.tmp</code>. Running <code>git status --ignored</code> confirmed that Git ignores both while tracking <code>.gitignore</code>:</p>
+    <pre>git status --ignored
+# Output confirms:
+# Untracked files: .gitignore
+# Ignored files:   debug.log, temp/
+
+git add .gitignore
+git commit -m "Configure .gitignore: Ignore *.log files and temp/ directory"
+# [main 850d9e4] Configure .gitignore: Ignore *.log files and temp/ directory</pre>
+
+    <div class="step-heading">Step 4: Undo Operation using Git</div>
+    <p>To demonstrate an undo operation on a commit:</p>
+    <ol>
+        <li>I made an additional commit by adding a temporary file <code>experimental.html</code>:
+            <pre>git add experimental.html
+git commit -m "Add experimental feature for undo testing"
+# [main e265a46] Add experimental feature for undo testing</pre>
+        </li>
+        <li>I then undid this commit using <code>git revert HEAD --no-edit</code>:
+            <pre>git revert HEAD --no-edit
+# [main 21aec47] Revert "Add experimental feature for undo testing"
+# 1 file changed, 11 deletions(-)
+# delete mode 100644 experimental.html</pre>
+        </li>
+        <li><strong>Effect on repository state:</strong>
+            <ul>
+                <li>The file <code>experimental.html</code> was automatically deleted from the working tree (verified with <code>Test-Path experimental.html</code> returning <code>False</code>).</li>
+                <li>Working directory is clean (<code>git status</code> reports <em>nothing to commit, working tree clean</em>).</li>
+                <li><strong>Why I chose <code>git revert</code>:</strong> In Git, <code>git revert</code> is the recommended undo operation for public and shared repositories because it creates an inverse commit without rewriting history. This ensures the undo action is transparently verified on GitHub's commit log. (Alternatively, <code>git reset HEAD~1</code> can be used locally, but that rewinds HEAD and deletes the commit from the branch history).</li>
+            </ul>
+        </li>
+    </ol>
+
+    <div class="step-heading">Step 5: GitHub Integration</div>
+    <p>After completing the local version control operations, I connected the repository to GitHub and pushed the history:</p>
+    <ol>
+        <li>Created a public repository named <code>bits-git-assignment</code> under my GitHub account.</li>
+        <li>Connected the remote origin and pushed both <code>main</code> and <code>feature</code> branches:
+            <pre>git remote add origin https://github.com/Sachith77/bits-git-assignment.git
+git push -u origin main
+git push -u origin feature</pre>
+        </li>
+    </ol>
+    <p><strong>Verified Commit History on GitHub:</strong></p>
+    <pre>dce298a  Add assignment submission report and documentation
+d7d89d4  Add git_commands.txt: Detailed reference documentation of all Git commands
+21aec47  Revert "Add experimental feature for undo testing"              (Step 4: Undo Verified)
+e265a46  Add experimental feature for undo testing                        (Step 4: Target Commit)
+850d9e4  Configure .gitignore: Ignore *.log files and temp/ directory    (Step 3: .gitignore)
+f348d2a  Merge branch 'feature' into main                                 (Step 2: Merge Commit)
+23ccf53  Enhance about.html: Add branching strategy details on feature   (Step 2: Feature Branch)
+97d80cd  Update index.html: Add key topics covered section                (Step 2: Second Commit)
+0642323  Initial commit: Add index.html and about.html                    (Step 1: Initial Commit)</pre>
+
+    <!-- ==================== PAGE 3 ==================== -->
+    <div class="page-break"></div>
+
+    <div class="step-heading">Step 6: Command Documentation File (git_commands.txt)</div>
+    <p>I documented all Git commands used during this assignment in <code>git_commands.txt</code> along with a 1–2 line explanation for each command. The file is included in the project directory, committed, and pushed to GitHub. Below is the complete reference table:</p>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th style="width: 5%;">#</th>
+                <th style="width: 38%;">Git Command</th>
+                <th style="width: 57%;">Brief Explanation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><code>git init -b main</code></td>
+                <td>Initializes a new local Git repository inside the project folder with 'main' as default branch.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><code>git status</code></td>
+                <td>Displays the state of the working directory and staging area, highlighting untracked or modified files.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><code>git add .</code></td>
+                <td>Stages all new, modified, and deleted files in the working directory for the upcoming commit.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><code>git commit -m "Initial commit..."</code></td>
+                <td>Records the staged snapshot of index.html and about.html into repository history.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><code>git add index.html</code></td>
+                <td>Stages modifications made specifically to index.html for the second commit.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><code>git commit -m "Update index.html..."</code></td>
+                <td>Creates the second commit on the main branch, recording changes made to index.html.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><code>git branch feature</code></td>
+                <td>Creates a new branch named 'feature' branching off from the current commit of the main branch.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><code>git switch feature</code> (or <code>git checkout</code>)</td>
+                <td>Switches the active working branch from 'main' to 'feature', updating HEAD and working tree.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><code>git branch</code></td>
+                <td>Lists all local branches in the repository and marks the currently active branch with an asterisk (*).</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><code>git add about.html</code></td>
+                <td>Stages modifications made to about.html while working on the isolated 'feature' branch.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><code>git commit -m "Enhance about.html..."</code></td>
+                <td>Records the commit containing the new about.html content directly onto the 'feature' branch.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><code>git switch main</code></td>
+                <td>Switches the active branch back to 'main' in preparation for integrating the feature branch changes.</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><code>git merge --no-ff feature -m "..."</code></td>
+                <td>Merges the 'feature' branch into 'main' using a dedicated merge commit (--no-ff) to preserve branch history.</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><code>git log --graph --oneline --all</code></td>
+                <td>Displays a compact graphical view of commit history across all branches showing divergence and merge points.</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><code>git status --ignored</code></td>
+                <td>Displays working directory status including files deliberately ignored according to rules defined in .gitignore.</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td><code>git add .gitignore</code></td>
+                <td>Stages the newly created .gitignore file containing exclusion rules for *.log and temp/.</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td><code>git commit -m "Configure .gitignore..."</code></td>
+                <td>Records .gitignore into version control history so that ignore rules are tracked and shared.</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td><code>git add experimental.html</code></td>
+                <td>Stages a temporary experimental file created specifically to demonstrate an undo operation.</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td><code>git commit -m "Add experimental..."</code></td>
+                <td>Records the experimental commit that will subsequently be undone.</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td><code>git revert HEAD --no-edit</code></td>
+                <td>Undoes the previous commit safely by creating an inverse commit, removing experimental.html while preserving history.</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td><code>git reset HEAD~1</code> (Alternative Undo)</td>
+                <td>Moves HEAD and branch pointer back by one commit; used locally when commits have not yet been pushed to remote.</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td><code>git remote add origin &lt;url&gt;</code></td>
+                <td>Associates the local Git repository with the remote public repository hosted on GitHub.</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td><code>git remote -v</code></td>
+                <td>Lists all configured remote connections along with their fetch and push target URLs.</td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td><code>git push -u origin main</code></td>
+                <td>Pushes the complete 'main' branch commit history to GitHub and establishes upstream tracking.</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td><code>git push -u origin feature</code></td>
+                <td>Pushes the local 'feature' branch to GitHub so all branching history and commits are visible remotely.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ==================== PAGE 4 ==================== -->
+    <div class="page-break"></div>
+
+    <div class="question-header">Question 2: Test Case Design</div>
+
+    <p><strong>Application Scenario:</strong> Testing a Login System with inputs <code>Username</code>, <code>Password</code>, and a <code>Login button</code>.</p>
+    
+    <p><strong>Functional Requirements:</strong></p>
+    <ol style="margin-bottom: 4px;">
+        <li>Username must not be empty.</li>
+        <li>Password must be at least 6 characters long.</li>
+        <li>Valid username and password allow a successful login.</li>
+        <li>Invalid credentials should display an error message.</li>
+        <li>After 3 consecutive failed login attempts, the account should be locked.</li>
+    </ol>
+
+    <div class="note-box">
+        <strong>Test Design Approach:</strong> Designed using Equivalence Partitioning (valid vs. invalid input partitions), Boundary Value Analysis (testing password lengths at 0, 5, 6, and >6 characters), and State Transition testing for the 3-attempt account lockout mechanism.
+    </div>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th style="width: 10%;">Test Case ID</th>
+                <th style="width: 28%;">Test Scenario</th>
+                <th style="width: 25%;">Input Data</th>
+                <th style="width: 37%;">Expected Output</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>TC_01</strong></td>
+                <td>Valid login with correct credentials (Requirement 3)</td>
+                <td>Username = <code>user1</code><br>Password = <code>pass123</code> (7 chars)<br>Click Login</td>
+                <td>Login successful. System authenticates user and redirects to dashboard with welcome message: "Welcome, user1".</td>
+            </tr>
+            <tr>
+                <td><strong>TC_02</strong></td>
+                <td>Valid login with password length equal to 6 characters (Boundary: Requirement 2 &amp; 3)</td>
+                <td>Username = <code>user1</code><br>Password = <code>Pass@6</code> (6 chars)<br>Click Login</td>
+                <td>Login successful. System accepts 6-character password and redirects to user dashboard.</td>
+            </tr>
+            <tr>
+                <td><strong>TC_03</strong></td>
+                <td>Login with empty username (Edge case: Requirement 1)</td>
+                <td>Username = <code>""</code> (Empty)<br>Password = <code>pass123</code><br>Click Login</td>
+                <td>Login rejected. System displays validation message: "Username must not be empty." Focus moves to Username field.</td>
+            </tr>
+            <tr>
+                <td><strong>TC_04</strong></td>
+                <td>Login with empty password (Edge case: Requirement 2)</td>
+                <td>Username = <code>user1</code><br>Password = <code>""</code> (Empty)<br>Click Login</td>
+                <td>Login rejected. System displays validation message: "Password must not be empty and must be at least 6 characters long."</td>
+            </tr>
+            <tr>
+                <td><strong>TC_05</strong></td>
+                <td>Login with both username and password empty (Edge case: Requirements 1 &amp; 2)</td>
+                <td>Username = <code>""</code> (Empty)<br>Password = <code>""</code> (Empty)<br>Click Login</td>
+                <td>Login rejected. System displays validation messages: "Username must not be empty" and "Password must not be empty."</td>
+            </tr>
+            <tr>
+                <td><strong>TC_06</strong></td>
+                <td>Login with password length less than 6 characters (Boundary: Requirement 2)</td>
+                <td>Username = <code>user1</code><br>Password = <code>12345</code> (5 chars)<br>Click Login</td>
+                <td>Login rejected. System displays validation message: "Password must be at least 6 characters long." Submission halted.</td>
+            </tr>
+            <tr>
+                <td><strong>TC_07</strong></td>
+                <td>Login with unregistered username (Requirement 4)</td>
+                <td>Username = <code>unknownUser</code><br>Password = <code>secretPass1</code><br>Click Login</td>
+                <td>Login rejected. System displays error message: "Invalid username or password. Please verify your credentials and try again."</td>
+            </tr>
+            <tr>
+                <td><strong>TC_08</strong></td>
+                <td>Login with registered username but incorrect password (Requirements 4 &amp; 5)</td>
+                <td>Username = <code>user1</code><br>Password = <code>wrongPass99</code><br>Click Login</td>
+                <td>Login rejected. System displays error message: "Invalid username or password. You have 2 attempt(s) remaining before account lockout."</td>
+            </tr>
+            <tr>
+                <td><strong>TC_09</strong></td>
+                <td>Account lockout after 3 consecutive failed login attempts (Requirement 5)</td>
+                <td>Attempt 1: <code>user1</code> / <code>badPass1</code><br>Attempt 2: <code>user1</code> / <code>badPass2</code><br>Attempt 3: <code>user1</code> / <code>badPass3</code><br>Click Login each</td>
+                <td>On the 3rd consecutive failed attempt, login is rejected and system displays alert: "Your account has been locked due to 3 consecutive failed login attempts. Please contact administrator or reset your password." Account status changes to LOCKED.</td>
+            </tr>
+            <tr>
+                <td><strong>TC_10</strong></td>
+                <td>Login attempt on locked account with correct credentials (Security verification)</td>
+                <td>Pre-condition: <code>user1</code> is locked (via TC_09)<br>Username = <code>user1</code><br>Password = <code>pass123</code> (Valid)<br>Click Login</td>
+                <td>Login blocked despite correct credentials. System displays: "This account is currently locked. Authentication disabled. Please contact customer support."</td>
+            </tr>
+            <tr>
+                <td><strong>TC_11</strong></td>
+                <td>Successful login resets failed attempts counter (State verification)</td>
+                <td>Attempt 1: <code>user1</code> / <code>wrong1</code> (Fail)<br>Attempt 2: <code>user1</code> / <code>wrong2</code> (Fail)<br>Attempt 3: <code>user1</code> / <code>pass123</code> (Valid)<br>Click Login</td>
+                <td>Login successful. User authenticated and redirected to dashboard. Consecutive failed attempts counter is reset back to 0.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p style="font-size: 8pt; color: #64748b; margin-top: 6px;">
+        <strong>Requirement Coverage:</strong> FR_1 covered by TC_01, TC_03, TC_05 &bull; FR_2 covered by TC_01, TC_02, TC_04, TC_05, TC_06 &bull; FR_3 covered by TC_01, TC_02, TC_11 &bull; FR_4 covered by TC_07, TC_08 &bull; FR_5 covered by TC_08, TC_09, TC_10, TC_11.
+    </p>
+
+</body>
+</html>
